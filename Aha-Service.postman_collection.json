@@ -61,6 +61,63 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "obtener campos de aha",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Expected booking is returned\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.eql(jsonData);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://896r1uhkrh.execute-api.us-east-1.amazonaws.com/development/releases/{{idRelease}}",
+					"protocol": "https",
+					"host": [
+						"896r1uhkrh",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"development",
+						"releases",
+						"{{idRelease}}"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
