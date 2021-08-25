@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "1ba23eb8-c542-4a23-9a5e-98c4a39ff178",
+		"name": "Aha-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "obtener campos de aha desde api AWS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://896r1uhkrh.execute-api.us-east-1.amazonaws.com/development/releases/{{idRelease}}",
+					"protocol": "https",
+					"host": [
+						"896r1uhkrh",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"development",
+						"releases",
+						"{{idRelease}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
